@@ -1,0 +1,1983 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>GitHub Top 250 最受欢迎项目 | BugMakerHub</title><meta name="author" content="老酒馆的馆长大人"><meta name="copyright" content="老酒馆的馆长大人"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="数据来源: GitHub API | 更新日期: 2026-07-01     # 项目 Stars 语言 简介    1 codecrafters-io&#x2F;build-your-own-x 521233 Markdown 通过从零重建你喜爱的技术来掌握编程   2 sindresorhus&#x2F;awesome 480368 N&#x2F;A 各种有趣主题的精选列表   3 fre">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub Top 250 最受欢迎项目">
+<meta property="og:url" content="https://blog.bugmakerhub.xyz/2026/07/06/github-top250/index.html">
+<meta property="og:site_name" content="BugMakerHub">
+<meta property="og:description" content="数据来源: GitHub API | 更新日期: 2026-07-01     # 项目 Stars 语言 简介    1 codecrafters-io&#x2F;build-your-own-x 521233 Markdown 通过从零重建你喜爱的技术来掌握编程   2 sindresorhus&#x2F;awesome 480368 N&#x2F;A 各种有趣主题的精选列表   3 fre">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog.bugmakerhub.xyz/img/cute.png">
+<meta property="article:published_time" content="2026-07-06T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-07-13T01:16:45.834Z">
+<meta property="article:author" content="老酒馆的馆长大人">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="开源">
+<meta property="article:tag" content="排行榜">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.bugmakerhub.xyz/img/cute.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "GitHub Top 250 最受欢迎项目",
+  "url": "https://blog.bugmakerhub.xyz/2026/07/06/github-top250/",
+  "image": "https://blog.bugmakerhub.xyz/img/cute.png",
+  "datePublished": "2026-07-06T04:00:00.000Z",
+  "dateModified": "2026-07-13T01:16:45.834Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "老酒馆的馆长大人",
+      "url": "https://blog.bugmakerhub.xyz"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/cute2.png"><link rel="canonical" href="https://blog.bugmakerhub.xyz/2026/07/06/github-top250/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.5"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'GitHub Top 250 最受欢迎项目',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/img/background.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/shuoshuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/navi/"><i class="fa-fw fas fa-cube"></i><span> 工具盒</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cute.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">BugMakerHub</span></a><a class="nav-page-title" href="/"><span class="site-name">GitHub Top 250 最受欢迎项目</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/shuoshuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/navi/"><i class="fa-fw fas fa-cube"></i><span> 工具盒</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">GitHub Top 250 最受欢迎项目</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-06T04:00:00.000Z" title="发表于 2026-07-06 12:00:00">2026-07-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-13T01:16:45.834Z" title="更新于 2026-07-13 09:16:45">2026-07-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%B5%84%E6%BA%90/">资源</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">4.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>20分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>数据来源: GitHub API | 更新日期: 2026-07-01</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>项目</th>
+<th>Stars</th>
+<th>语言</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/codecrafters-io/build-your-own-x">codecrafters-io&#x2F;build-your-own-x</a></td>
+<td>521233</td>
+<td>Markdown</td>
+<td>通过从零重建你喜爱的技术来掌握编程</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/sindresorhus/awesome">sindresorhus&#x2F;awesome</a></td>
+<td>480368</td>
+<td>N&#x2F;A</td>
+<td>各种有趣主题的精选列表</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/freeCodeCamp/freeCodeCamp">freeCodeCamp&#x2F;freeCodeCamp</a></td>
+<td>450711</td>
+<td>TypeScript</td>
+<td>开源代码库和课程，免费学习编程</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/public-apis/public-apis">public-apis&#x2F;public-apis</a></td>
+<td>445519</td>
+<td>Python</td>
+<td>免费API的集体列表</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/EbookFoundation/free-programming-books">EbookFoundation&#x2F;free-programming-books</a></td>
+<td>391052</td>
+<td>Python</td>
+<td>免费提供的编程书籍</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw">openclaw&#x2F;openclaw</a></td>
+<td>381235</td>
+<td>TypeScript</td>
+<td>你的个人AI助手，任何操作系统，任何平台</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/nilbuild/developer-roadmap">nilbuild&#x2F;developer-roadmap</a></td>
+<td>358769</td>
+<td>TypeScript</td>
+<td>交互式学习路线图，帮助开发者成长</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/donnemartin/system-design-primer">donnemartin&#x2F;system-design-primer</a></td>
+<td>355637</td>
+<td>Python</td>
+<td>学习设计大规模系统，备战系统设计面试</td>
+</tr>
+<tr>
+<td>9</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/jwasham/coding-interview-university">jwasham&#x2F;coding-interview-university</a></td>
+<td>354700</td>
+<td>N&#x2F;A</td>
+<td>成为软件工程师的完整计算机学习计划</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/vinta/awesome-python">vinta&#x2F;awesome-python</a></td>
+<td>305713</td>
+<td>Python</td>
+<td>Python框架、库和资源的精选列表</td>
+</tr>
+<tr>
+<td>11</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/awesome-selfhosted/awesome-selfhosted">awesome-selfhosted&#x2F;awesome-selfhosted</a></td>
+<td>302124</td>
+<td>N&#x2F;A</td>
+<td>可自行托管的免费软件网络服务列表</td>
+</tr>
+<tr>
+<td>12</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/996icu/996.ICU">996icu&#x2F;996.ICU</a></td>
+<td>276337</td>
+<td>N&#x2F;A</td>
+<td>为996工作制开发者致敬</td>
+</tr>
+<tr>
+<td>13</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/practical-tutorials/project-based-learning">practical-tutorials&#x2F;project-based-learning</a></td>
+<td>271583</td>
+<td>N&#x2F;A</td>
+<td>基于项目的编程教程精选列表</td>
+</tr>
+<tr>
+<td>14</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/react/react">react&#x2F;react</a></td>
+<td>246127</td>
+<td>JavaScript</td>
+<td>构建Web和原生用户界面的库</td>
+</tr>
+<tr>
+<td>15</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/obra/superpowers">obra&#x2F;superpowers</a></td>
+<td>242888</td>
+<td>Shell</td>
+<td>智能体技能框架与软件开发方法论</td>
+</tr>
+<tr>
+<td>16</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/torvalds/linux">torvalds&#x2F;linux</a></td>
+<td>237891</td>
+<td>C</td>
+<td>Linux内核源码</td>
+</tr>
+<tr>
+<td>17</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/trimstray/the-book-of-secret-knowledge">trimstray&#x2F;the-book-of-secret-knowledge</a></td>
+<td>231064</td>
+<td>N&#x2F;A</td>
+<td>技术清单、手册和工具的集合</td>
+</tr>
+<tr>
+<td>18</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/affaan-m/ECC">affaan-m&#x2F;ECC</a></td>
+<td>224276</td>
+<td>JavaScript</td>
+<td>智能体性能优化系统，包含技能、记忆和安全</td>
+</tr>
+<tr>
+<td>19</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/TheAlgorithms/Python">TheAlgorithms&#x2F;Python</a></td>
+<td>222333</td>
+<td>Python</td>
+<td>Python实现的所有算法</td>
+</tr>
+<tr>
+<td>20</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/vuejs/vue">vuejs&#x2F;vue</a></td>
+<td>209922</td>
+<td>TypeScript</td>
+<td>Vue 2 仓库</td>
+</tr>
+<tr>
+<td>21</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent">NousResearch&#x2F;hermes-agent</a></td>
+<td>206725</td>
+<td>Python</td>
+<td>与你一起成长的智能体</td>
+</tr>
+<tr>
+<td>22</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ossu/computer-science">ossu&#x2F;computer-science</a></td>
+<td>205501</td>
+<td>HTML</td>
+<td>免费的计算机科学自学教育路径</td>
+</tr>
+<tr>
+<td>23</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/trekhleb/javascript-algorithms">trekhleb&#x2F;javascript-algorithms</a></td>
+<td>196150</td>
+<td>JavaScript</td>
+<td>JavaScript实现的算法与数据结构</td>
+</tr>
+<tr>
+<td>24</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/tensorflow/tensorflow">tensorflow&#x2F;tensorflow</a></td>
+<td>195873</td>
+<td>C++</td>
+<td>面向所有人的开源机器学习框架</td>
+</tr>
+<tr>
+<td>25</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/n8n-io/n8n">n8n-io&#x2F;n8n</a></td>
+<td>194728</td>
+<td>TypeScript</td>
+<td>公平代码的工作流自动化平台，支持原生AI能力</td>
+</tr>
+<tr>
+<td>26</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultraworkers/claw-code">ultraworkers&#x2F;claw-code</a></td>
+<td>194486</td>
+<td>Rust</td>
+<td>Rust构建的智能体管理博物馆展品</td>
+</tr>
+<tr>
+<td>27</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh">ohmyzsh&#x2F;ohmyzsh</a></td>
+<td>188236</td>
+<td>Shell</td>
+<td>管理zsh配置的社区驱动框架</td>
+</tr>
+<tr>
+<td>28</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/microsoft/vscode">microsoft&#x2F;vscode</a></td>
+<td>186831</td>
+<td>TypeScript</td>
+<td>Visual Studio Code 编辑器</td>
+</tr>
+<tr>
+<td>29</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/multica-ai/andrej-karpathy-skills">multica-ai&#x2F;andrej-karpathy-skills</a></td>
+<td>185563</td>
+<td>N&#x2F;A</td>
+<td>改善Claude Code行为的CLAUDE.md文件</td>
+</tr>
+<tr>
+<td>30</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Significant-Gravitas/AutoGPT">Significant-Gravitas&#x2F;AutoGPT</a></td>
+<td>185221</td>
+<td>Python</td>
+<td>让AI人人可用的愿景</td>
+</tr>
+<tr>
+<td>31</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/CyC2018/CS-Notes">CyC2018&#x2F;CS-Notes</a></td>
+<td>184661</td>
+<td>N&#x2F;A</td>
+<td>计算机基础知识与LeetCode题解</td>
+</tr>
+<tr>
+<td>32</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/getify/You-Dont-Know-JS">getify&#x2F;You-Dont-Know-JS</a></td>
+<td>184553</td>
+<td>N&#x2F;A</td>
+<td>JavaScript语言书籍系列</td>
+</tr>
+<tr>
+<td>33</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/jackfrued/Python-100-Days">jackfrued&#x2F;Python-100-Days</a></td>
+<td>183827</td>
+<td>Jupyter Notebook</td>
+<td>Python 100天从新手到大师</td>
+</tr>
+<tr>
+<td>34</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/DigitalPlatDev/FreeDomain">DigitalPlatDev&#x2F;FreeDomain</a></td>
+<td>181835</td>
+<td>HTML</td>
+<td>DigitalPlat 免费域名服务</td>
+</tr>
+<tr>
+<td>35</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/massgravel/Microsoft-Activation-Scripts">massgravel&#x2F;Microsoft-Activation-Scripts</a></td>
+<td>181420</td>
+<td>Batchfile</td>
+<td>开源Windows和Office激活工具</td>
+</tr>
+<tr>
+<td>36</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anomalyco/opencode">anomalyco&#x2F;opencode</a></td>
+<td>181055</td>
+<td>TypeScript</td>
+<td>开源编码智能体</td>
+</tr>
+<tr>
+<td>37</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/flutter/flutter">flutter&#x2F;flutter</a></td>
+<td>177513</td>
+<td>Dart</td>
+<td>快速构建跨平台精美应用的框架</td>
+</tr>
+<tr>
+<td>38</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/avelino/awesome-go">avelino&#x2F;awesome-go</a></td>
+<td>176844</td>
+<td>Go</td>
+<td>Go框架、库和软件的精选列表</td>
+</tr>
+<tr>
+<td>39</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ollama/ollama">ollama&#x2F;ollama</a></td>
+<td>175206</td>
+<td>Go</td>
+<td>本地运行大语言模型的工具</td>
+</tr>
+<tr>
+<td>40</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/github/gitignore">github&#x2F;gitignore</a></td>
+<td>174665</td>
+<td>N&#x2F;A</td>
+<td>有用的.gitignore模板合集</td>
+</tr>
+<tr>
+<td>41</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/yt-dlp/yt-dlp">yt-dlp&#x2F;yt-dlp</a></td>
+<td>174441</td>
+<td>Python</td>
+<td>功能丰富的命令行音视频下载器</td>
+</tr>
+<tr>
+<td>42</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/twbs/bootstrap">twbs&#x2F;bootstrap</a></td>
+<td>174410</td>
+<td>MDX</td>
+<td>最流行的HTML&#x2F;CSS&#x2F;JS响应式框架</td>
+</tr>
+<tr>
+<td>43</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/f/prompts.chat">f&#x2F;prompts.chat</a></td>
+<td>164578</td>
+<td>HTML</td>
+<td>分享和发现ChatGPT提示词</td>
+</tr>
+<tr>
+<td>44</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">AUTOMATIC1111&#x2F;stable-diffusion-webui</a></td>
+<td>163876</td>
+<td>Python</td>
+<td>Stable Diffusion Web 用户界面</td>
+</tr>
+<tr>
+<td>45</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/521xueweihan/HelloGitHub">521xueweihan&#x2F;HelloGitHub</a></td>
+<td>163451</td>
+<td>Python</td>
+<td>分享GitHub上有趣的开源项目</td>
+</tr>
+<tr>
+<td>46</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/huggingface/transformers">huggingface&#x2F;transformers</a></td>
+<td>162064</td>
+<td>Python</td>
+<td>SOTA机器学习模型框架</td>
+</tr>
+<tr>
+<td>47</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/microsoft/markitdown">microsoft&#x2F;markitdown</a></td>
+<td>161891</td>
+<td>Python</td>
+<td>将文件和办公文档转换为Markdown的Python工具</td>
+</tr>
+<tr>
+<td>48</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/jlevy/the-art-of-command-line">jlevy&#x2F;the-art-of-command-line</a></td>
+<td>161466</td>
+<td>N&#x2F;A</td>
+<td>掌握命令行，一页纸</td>
+</tr>
+<tr>
+<td>49</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/skills">anthropics&#x2F;skills</a></td>
+<td>157119</td>
+<td>Python</td>
+<td>智能体技能的公开仓库</td>
+</tr>
+<tr>
+<td>50</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Snailclimb/JavaGuide">Snailclimb&#x2F;JavaGuide</a></td>
+<td>156727</td>
+<td>JavaScript</td>
+<td>Java学习与面试指南</td>
+</tr>
+<tr>
+<td>51</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/mattpocock/skills">mattpocock&#x2F;skills</a></td>
+<td>152207</td>
+<td>Shell</td>
+<td>给真正工程师的技能，来自我的.claude目录</td>
+</tr>
+<tr>
+<td>52</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langflow-ai/langflow">langflow-ai&#x2F;langflow</a></td>
+<td>150285</td>
+<td>Python</td>
+<td>构建和部署AI智能体与工作流的强大工具</td>
+</tr>
+<tr>
+<td>53</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/airbnb/javascript">airbnb&#x2F;javascript</a></td>
+<td>148086</td>
+<td>JavaScript</td>
+<td>JavaScript风格指南</td>
+</tr>
+<tr>
+<td>54</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langgenius/dify">langgenius&#x2F;dify</a></td>
+<td>147197</td>
+<td>TypeScript</td>
+<td>生产就绪的智能体工作流开发平台</td>
+</tr>
+<tr>
+<td>55</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Genymobile/scrcpy">Genymobile&#x2F;scrcpy</a></td>
+<td>144810</td>
+<td>C</td>
+<td>在电脑上显示和控制Android设备</td>
+</tr>
+<tr>
+<td>56</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/open-webui/open-webui">open-webui&#x2F;open-webui</a></td>
+<td>143645</td>
+<td>Python</td>
+<td>用户友好的AI界面，支持Ollama和OpenAI</td>
+</tr>
+<tr>
+<td>57</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/firecrawl/firecrawl">firecrawl&#x2F;firecrawl</a></td>
+<td>142384</td>
+<td>TypeScript</td>
+<td>大规模搜索、抓取和交互网页的API</td>
+</tr>
+<tr>
+<td>58</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools">x1xhlol&#x2F;system-prompts-and-models-of-ai-tools</a></td>
+<td>141369</td>
+<td>N&#x2F;A</td>
+<td>AI工具系统提示词和模型集合</td>
+</tr>
+<tr>
+<td>59</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ytdl-org/youtube-dl">ytdl-org&#x2F;youtube-dl</a></td>
+<td>140617</td>
+<td>Python</td>
+<td>命令行YouTube视频下载工具</td>
+</tr>
+<tr>
+<td>60</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain">langchain-ai&#x2F;langchain</a></td>
+<td>140615</td>
+<td>Python</td>
+<td>智能体工程平台</td>
+</tr>
+<tr>
+<td>61</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/yangshun/tech-interview-handbook">yangshun&#x2F;tech-interview-handbook</a></td>
+<td>140536</td>
+<td>TypeScript</td>
+<td>软件工程师面试备考资料</td>
+</tr>
+<tr>
+<td>62</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/vercel/next.js">vercel&#x2F;next.js</a></td>
+<td>140195</td>
+<td>JavaScript</td>
+<td>React全栈框架</td>
+</tr>
+<tr>
+<td>63</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/microsoft/PowerToys">microsoft&#x2F;PowerToys</a></td>
+<td>135863</td>
+<td>C</td>
+<td>Windows生产力工具集</td>
+</tr>
+<tr>
+<td>64</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code">anthropics&#x2F;claude-code</a></td>
+<td>135215</td>
+<td>Python</td>
+<td>终端中的智能编码工具</td>
+</tr>
+<tr>
+<td>65</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/golang/go">golang&#x2F;go</a></td>
+<td>134885</td>
+<td>Go</td>
+<td>Go编程语言</td>
+</tr>
+<tr>
+<td>66</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/labuladong/fucking-algorithm">labuladong&#x2F;fucking-algorithm</a></td>
+<td>134633</td>
+<td>Markdown</td>
+<td>刷LeetCode，不仅会，还要知其所以然</td>
+</tr>
+<tr>
+<td>67</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/iptv-org/iptv">iptv-org&#x2F;iptv</a></td>
+<td>129665</td>
+<td>TypeScript</td>
+<td>全球公开IPTV频道集合</td>
+</tr>
+<tr>
+<td>68</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/clash-verge-rev/clash-verge-rev">clash-verge-rev&#x2F;clash-verge-rev</a></td>
+<td>128926</td>
+<td>TypeScript</td>
+<td>基于Tauri的现代GUI代理客户端</td>
+</tr>
+<tr>
+<td>69</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Chalarangelo/30-seconds-of-code">Chalarangelo&#x2F;30-seconds-of-code</a></td>
+<td>128246</td>
+<td>JavaScript</td>
+<td>提升编码技能的代码片段</td>
+</tr>
+<tr>
+<td>70</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/krahets/hello-algo">krahets&#x2F;hello-algo</a></td>
+<td>128042</td>
+<td>Java</td>
+<td>动画图解的数据结构与算法教程</td>
+</tr>
+<tr>
+<td>71</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ripienaar/free-for-dev">ripienaar&#x2F;free-for-dev</a></td>
+<td>127441</td>
+<td>HTML</td>
+<td>有免费层级的SaaS&#x2F;PaaS&#x2F;IaaS服务列表</td>
+</tr>
+<tr>
+<td>72</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/excalidraw/excalidraw">excalidraw&#x2F;excalidraw</a></td>
+<td>126526</td>
+<td>TypeScript</td>
+<td>手绘风格的白板绘图工具</td>
+</tr>
+<tr>
+<td>73</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/react/react-native">react&#x2F;react-native</a></td>
+<td>126127</td>
+<td>C++</td>
+<td>用React构建原生应用的框架</td>
+</tr>
+<tr>
+<td>74</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/kubernetes/kubernetes">kubernetes&#x2F;kubernetes</a></td>
+<td>123297</td>
+<td>Go</td>
+<td>生产级容器调度管理系统</td>
+</tr>
+<tr>
+<td>75</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/electron/electron">electron&#x2F;electron</a></td>
+<td>121849</td>
+<td>C++</td>
+<td>用JS&#x2F;HTML&#x2F;CSS构建跨平台桌面应用</td>
+</tr>
+<tr>
+<td>76</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/msitarzewski/agency-agents">msitarzewski&#x2F;agency-agents</a></td>
+<td>121489</td>
+<td>Shell</td>
+<td>触手可及的完整AI机构</td>
+</tr>
+<tr>
+<td>77</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Comfy-Org/ComfyUI">Comfy-Org&#x2F;ComfyUI</a></td>
+<td>118977</td>
+<td>Python</td>
+<td>最强大的模块化扩散模型GUI</td>
+</tr>
+<tr>
+<td>78</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ggml-org/llama.cpp">ggml-org&#x2F;llama.cpp</a></td>
+<td>118858</td>
+<td>C++</td>
+<td>C&#x2F;C++实现的LLM推理引擎</td>
+</tr>
+<tr>
+<td>79</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/garrytan/gstack">garrytan&#x2F;gstack</a></td>
+<td>118522</td>
+<td>TypeScript</td>
+<td>Garry Tan的Claude Code配置工具集</td>
+</tr>
+<tr>
+<td>80</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/nodejs/node">nodejs&#x2F;node</a></td>
+<td>117938</td>
+<td>JavaScript</td>
+<td>Node.js JavaScript运行时</td>
+</tr>
+<tr>
+<td>81</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/shadcn-ui/ui">shadcn-ui&#x2F;ui</a></td>
+<td>117734</td>
+<td>TypeScript</td>
+<td>美观可访问的组件库和代码分发平台</td>
+</tr>
+<tr>
+<td>82</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/rustdesk/rustdesk">rustdesk&#x2F;rustdesk</a></td>
+<td>117423</td>
+<td>Rust</td>
+<td>开源远程桌面，可自托管</td>
+</tr>
+<tr>
+<td>83</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/justjavac/free-programming-books-zh_CN">justjavac&#x2F;free-programming-books-zh_CN</a></td>
+<td>117225</td>
+<td>N&#x2F;A</td>
+<td>免费的计算机编程类中文书籍</td>
+</tr>
+<tr>
+<td>84</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/github/spec-kit">github&#x2F;spec-kit</a></td>
+<td>116807</td>
+<td>Python</td>
+<td>Spec驱动开发的工具包</td>
+</tr>
+<tr>
+<td>85</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Shubhamsaboo/awesome-llm-apps">Shubhamsaboo&#x2F;awesome-llm-apps</a></td>
+<td>116177</td>
+<td>Python</td>
+<td>100多个你可以实际运行的AI应用</td>
+</tr>
+<tr>
+<td>86</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Hack-with-Github/Awesome-Hacking">Hack-with-Github&#x2F;Awesome-Hacking</a></td>
+<td>115379</td>
+<td>N&#x2F;A</td>
+<td>黑客、渗透测试和安全研究资源集合</td>
+</tr>
+<tr>
+<td>87</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/rust-lang/rust">rust-lang&#x2F;rust</a></td>
+<td>114170</td>
+<td>Rust</td>
+<td>Rust编程语言</td>
+</tr>
+<tr>
+<td>88</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/mrdoob/three.js">mrdoob&#x2F;three.js</a></td>
+<td>113421</td>
+<td>JavaScript</td>
+<td>JavaScript 3D库</td>
+</tr>
+<tr>
+<td>89</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/godotengine/godot">godotengine&#x2F;godot</a></td>
+<td>113407</td>
+<td>C++</td>
+<td>跨平台2D和3D游戏引擎</td>
+</tr>
+<tr>
+<td>90</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/d3/d3">d3&#x2F;d3</a></td>
+<td>113150</td>
+<td>Shell</td>
+<td>用SVG&#x2F;Canvas&#x2F;HTML让数据可视化</td>
+</tr>
+<tr>
+<td>91</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/microsoft/generative-ai-for-beginners">microsoft&#x2F;generative-ai-for-beginners</a></td>
+<td>112468</td>
+<td>Jupyter Notebook</td>
+<td>21节课入门生成式AI</td>
+</tr>
+<tr>
+<td>92</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/farion1231/cc-switch">farion1231&#x2F;cc-switch</a></td>
+<td>111511</td>
+<td>Rust</td>
+<td>跨平台桌面AI智能体助手</td>
+</tr>
+<tr>
+<td>93</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayN">2dust&#x2F;v2rayN</a></td>
+<td>110283</td>
+<td>C#</td>
+<td>Windows&#x2F;Linux&#x2F;macOS的GUI代理客户端</td>
+</tr>
+<tr>
+<td>94</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/microsoft/TypeScript">microsoft&#x2F;TypeScript</a></td>
+<td>109371</td>
+<td>TypeScript</td>
+<td>JavaScript的超集，编译为干净的JS</td>
+</tr>
+<tr>
+<td>95</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/axios/axios">axios&#x2F;axios</a></td>
+<td>109103</td>
+<td>JavaScript</td>
+<td>基于Promise的HTTP客户端</td>
+</tr>
+<tr>
+<td>96</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/tauri-apps/tauri">tauri-apps&#x2F;tauri</a></td>
+<td>108526</td>
+<td>Rust</td>
+<td>用Web前端构建更小更快更安全的桌面应用</td>
+</tr>
+<tr>
+<td>97</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/fatedier/frp">fatedier&#x2F;frp</a></td>
+<td>107686</td>
+<td>Go</td>
+<td>内网穿透反向代理工具</td>
+</tr>
+<tr>
+<td>98</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/papers-we-love/papers-we-love">papers-we-love&#x2F;papers-we-love</a></td>
+<td>107463</td>
+<td>Shell</td>
+<td>计算机科学论文阅读与讨论</td>
+</tr>
+<tr>
+<td>99</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/denoland/deno">denoland&#x2F;deno</a></td>
+<td>107345</td>
+<td>Rust</td>
+<td>JavaScript和TypeScript的现代运行时</td>
+</tr>
+<tr>
+<td>100</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/jaywcjlove/awesome-mac">jaywcjlove&#x2F;awesome-mac</a></td>
+<td>106538</td>
+<td>Swift</td>
+<td>高质量的macOS软件分类整理</td>
+</tr>
+<tr>
+<td>101</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/google-gemini/gemini-cli">google-gemini&#x2F;gemini-cli</a></td>
+<td>105687</td>
+<td>TypeScript</td>
+<td>将Gemini能力带到终端的开源AI智能体</td>
+</tr>
+<tr>
+<td>102</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/goldbergyoni/nodebestpractices">goldbergyoni&#x2F;nodebestpractices</a></td>
+<td>105383</td>
+<td>Dockerfile</td>
+<td>Node.js最佳实践列表</td>
+</tr>
+<tr>
+<td>103</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/supabase/supabase">supabase&#x2F;supabase</a></td>
+<td>105008</td>
+<td>TypeScript</td>
+<td>Postgres开发平台，提供数据库后端服务</td>
+</tr>
+<tr>
+<td>104</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/immich-app/immich">immich-app&#x2F;immich</a></td>
+<td>104796</td>
+<td>TypeScript</td>
+<td>高性能自托管的照片和视频管理方案</td>
+</tr>
+<tr>
+<td>105</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/whisper">openai&#x2F;whisper</a></td>
+<td>103955</td>
+<td>Python</td>
+<td>大规模弱监督的鲁棒语音识别</td>
+</tr>
+<tr>
+<td>106</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/deepseek-ai/DeepSeek-V3">deepseek-ai&#x2F;DeepSeek-V3</a></td>
+<td>103847</td>
+<td>Python</td>
+<td>DeepSeek V3 大语言模型</td>
+</tr>
+<tr>
+<td>107</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/microsoft/terminal">microsoft&#x2F;terminal</a></td>
+<td>103782</td>
+<td>C++</td>
+<td>新版Windows终端和原控制台</td>
+</tr>
+<tr>
+<td>108</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/react/create-react-app">react&#x2F;create-react-app</a></td>
+<td>103315</td>
+<td>JavaScript</td>
+<td>一条命令搭建现代Web应用</td>
+</tr>
+<tr>
+<td>109</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/browser-use/browser-use">browser-use&#x2F;browser-use</a></td>
+<td>101876</td>
+<td>Python</td>
+<td>让网站对AI智能体可访问，轻松在线自动化</td>
+</tr>
+<tr>
+<td>110</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/pytorch/pytorch">pytorch&#x2F;pytorch</a></td>
+<td>101001</td>
+<td>Python</td>
+<td>Python的张量和动态神经网络库</td>
+</tr>
+<tr>
+<td>111</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Anduin2017/HowToCook">Anduin2017&#x2F;HowToCook</a></td>
+<td>100987</td>
+<td>N&#x2F;A</td>
+<td>程序员的家庭烹饪指南</td>
+</tr>
+<tr>
+<td>112</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/neovim/neovim">neovim&#x2F;neovim</a></td>
+<td>100822</td>
+<td>Vim Script</td>
+<td>专注于可扩展性和易用性的Vim分支</td>
+</tr>
+<tr>
+<td>113</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/angular/angular">angular&#x2F;angular</a></td>
+<td>100376</td>
+<td>TypeScript</td>
+<td>自信交付Web应用的框架</td>
+</tr>
+<tr>
+<td>114</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/mtdvio/every-programmer-should-know">mtdvio&#x2F;every-programmer-should-know</a></td>
+<td>99989</td>
+<td>N&#x2F;A</td>
+<td>每个软件开发者应该知道的技术知识</td>
+</tr>
+<tr>
+<td>115</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/fastapi/fastapi">fastapi&#x2F;fastapi</a></td>
+<td>99839</td>
+<td>Python</td>
+<td>高性能易学习的Python Web框架</td>
+</tr>
+<tr>
+<td>116</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill">nextlevelbuilder&#x2F;ui-ux-pro-max-skill</a></td>
+<td>98914</td>
+<td>Python</td>
+<td>为专业UI&#x2F;UX多平台提供设计智能的AI技能</td>
+</tr>
+<tr>
+<td>117</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ant-design/ant-design">ant-design&#x2F;ant-design</a></td>
+<td>98533</td>
+<td>TypeScript</td>
+<td>企业级UI设计语言和React UI库</td>
+</tr>
+<tr>
+<td>118</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/mui/material-ui">mui&#x2F;material-ui</a></td>
+<td>98505</td>
+<td>JavaScript</td>
+<td>Material UI：Google Material Design的React组件库</td>
+</tr>
+<tr>
+<td>119</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/rasbt/LLMs-from-scratch">rasbt&#x2F;LLMs-from-scratch</a></td>
+<td>98272</td>
+<td>Jupyter Notebook</td>
+<td>从零实现ChatGPT类LLM的PyTorch教程</td>
+</tr>
+<tr>
+<td>120</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/nvbn/thefuck">nvbn&#x2F;thefuck</a></td>
+<td>97458</td>
+<td>Python</td>
+<td>纠正你之前控制台命令的神奇工具</td>
+</tr>
+<tr>
+<td>121</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/microsoft/Web-Dev-For-Beginners">microsoft&#x2F;Web-Dev-For-Beginners</a></td>
+<td>95934</td>
+<td>JavaScript</td>
+<td>24节课12周成为Web开发者</td>
+</tr>
+<tr>
+<td>122</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/tailwindlabs/tailwindcss">tailwindlabs&#x2F;tailwindcss</a></td>
+<td>95691</td>
+<td>TypeScript</td>
+<td>实用优先的CSS框架</td>
+</tr>
+<tr>
+<td>123</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/florinpop17/app-ideas">florinpop17&#x2F;app-ideas</a></td>
+<td>95400</td>
+<td>N&#x2F;A</td>
+<td>提升编码技能的应用创意集合</td>
+</tr>
+<tr>
+<td>124</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/puppeteer/puppeteer">puppeteer&#x2F;puppeteer</a></td>
+<td>95211</td>
+<td>TypeScript</td>
+<td>Chrome和Firefox的JavaScript API</td>
+</tr>
+<tr>
+<td>125</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ruanyf/weekly">ruanyf&#x2F;weekly</a></td>
+<td>94833</td>
+<td>N&#x2F;A</td>
+<td>阮一峰科技爱好者周刊</td>
+</tr>
+<tr>
+<td>126</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/VoltAgent/awesome-design-md">VoltAgent&#x2F;awesome-design-md</a></td>
+<td>94789</td>
+<td>N&#x2F;A</td>
+<td>流行品牌设计系统的DESIGN.md文件集合</td>
+</tr>
+<tr>
+<td>127</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex">openai&#x2F;codex</a></td>
+<td>94765</td>
+<td>Rust</td>
+<td>在终端中运行的轻量级编码智能体</td>
+</tr>
+<tr>
+<td>128</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/harry0703/MoneyPrinterTurbo">harry0703&#x2F;MoneyPrinterTurbo</a></td>
+<td>94662</td>
+<td>Python</td>
+<td>利用AI大模型一键生成短视频</td>
+</tr>
+<tr>
+<td>129</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/hacksider/Deep-Live-Cam">hacksider&#x2F;Deep-Live-Cam</a></td>
+<td>94478</td>
+<td>Python</td>
+<td>实时换脸和一键视频Deepfake工具</td>
+</tr>
+<tr>
+<td>130</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ryanmcdermott/clean-code-javascript">ryanmcdermott&#x2F;clean-code-javascript</a></td>
+<td>94448</td>
+<td>JavaScript</td>
+<td>适用于JavaScript的整洁代码原则</td>
+</tr>
+<tr>
+<td>131</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/iluwatar/java-design-patterns">iluwatar&#x2F;java-design-patterns</a></td>
+<td>94172</td>
+<td>Java</td>
+<td>Java实现的设计模式</td>
+</tr>
+<tr>
+<td>132</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/nvm-sh/nvm">nvm-sh&#x2F;nvm</a></td>
+<td>93989</td>
+<td>Shell</td>
+<td>POSIX兼容的Node版本管理器</td>
+</tr>
+<tr>
+<td>133</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/oven-sh/bun">oven-sh&#x2F;bun</a></td>
+<td>93473</td>
+<td>Rust</td>
+<td>极快的JS运行时、打包器、测试运行器和包管理器</td>
+</tr>
+<tr>
+<td>134</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/microsoft/playwright">microsoft&#x2F;playwright</a></td>
+<td>92003</td>
+<td>TypeScript</td>
+<td>跨浏览器Web测试和自动化框架</td>
+</tr>
+<tr>
+<td>135</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/deepseek-ai/DeepSeek-R1">deepseek-ai&#x2F;DeepSeek-R1</a></td>
+<td>91982</td>
+<td>N&#x2F;A</td>
+<td>DeepSeek R1 推理模型</td>
+</tr>
+<tr>
+<td>136</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/storybookjs/storybook">storybookjs&#x2F;storybook</a></td>
+<td>90408</td>
+<td>TypeScript</td>
+<td>UI组件隔离构建、文档化和测试的工具</td>
+</tr>
+<tr>
+<td>137</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/PanJiaChen/vue-element-admin">PanJiaChen&#x2F;vue-element-admin</a></td>
+<td>90251</td>
+<td>Vue</td>
+<td>神奇的后台管理系统模板</td>
+</tr>
+<tr>
+<td>138</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/TauricResearch/TradingAgents">TauricResearch&#x2F;TradingAgents</a></td>
+<td>90092</td>
+<td>Python</td>
+<td>多智能体LLM金融交易框架</td>
+</tr>
+<tr>
+<td>139</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/punkpeye/awesome-mcp-servers">punkpeye&#x2F;awesome-mcp-servers</a></td>
+<td>90074</td>
+<td>N&#x2F;A</td>
+<td>MCP服务器的精选集合</td>
+</tr>
+<tr>
+<td>140</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/bitcoin/bitcoin">bitcoin&#x2F;bitcoin</a></td>
+<td>89514</td>
+<td>C++</td>
+<td>比特币核心集成&#x2F;暂存树</td>
+</tr>
+<tr>
+<td>141</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv">opencv&#x2F;opencv</a></td>
+<td>89480</td>
+<td>C++</td>
+<td>开源计算机视觉库</td>
+</tr>
+<tr>
+<td>142</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/karpathy/autoresearch">karpathy&#x2F;autoresearch</a></td>
+<td>89345</td>
+<td>Python</td>
+<td>AI智能体自动进行单GPU nanochat训练研究</td>
+</tr>
+<tr>
+<td>143</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/mermaid-js/mermaid">mermaid-js&#x2F;mermaid</a></td>
+<td>88956</td>
+<td>TypeScript</td>
+<td>类Markdown文本生成图表</td>
+</tr>
+<tr>
+<td>144</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/gohugoio/hugo">gohugoio&#x2F;hugo</a></td>
+<td>88802</td>
+<td>Go</td>
+<td>世界上最快的网站构建框架</td>
+</tr>
+<tr>
+<td>145</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/gin-gonic/gin">gin-gonic&#x2F;gin</a></td>
+<td>88791</td>
+<td>Go</td>
+<td>Go语言高性能HTTP Web框架</td>
+</tr>
+<tr>
+<td>146</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/louislam/uptime-kuma">louislam&#x2F;uptime-kuma</a></td>
+<td>88616</td>
+<td>JavaScript</td>
+<td>好看的自托管监控工具</td>
+</tr>
+<tr>
+<td>147</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ChatGPTNextWeb/NextChat">ChatGPTNextWeb&#x2F;NextChat</a></td>
+<td>88339</td>
+<td>TypeScript</td>
+<td>轻量快速AI助手，支持多平台</td>
+</tr>
+<tr>
+<td>148</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/home-assistant/core">home-assistant&#x2F;core</a></td>
+<td>88048</td>
+<td>Python</td>
+<td>开源智能家居，本地控制和隐私优先</td>
+</tr>
+<tr>
+<td>149</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/3b1b/manim">3b1b&#x2F;manim</a></td>
+<td>88006</td>
+<td>Python</td>
+<td>数学解释视频的动画引擎</td>
+</tr>
+<tr>
+<td>150</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/django/django">django&#x2F;django</a></td>
+<td>87921</td>
+<td>Python</td>
+<td>适合有截止日期的完美主义者的Web框架</td>
+</tr>
+<tr>
+<td>151</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/modelcontextprotocol/servers">modelcontextprotocol&#x2F;servers</a></td>
+<td>87903</td>
+<td>TypeScript</td>
+<td>模型上下文协议服务器</td>
+</tr>
+<tr>
+<td>152</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/microsoft/ML-For-Beginners">microsoft&#x2F;ML-For-Beginners</a></td>
+<td>87571</td>
+<td>Jupyter Notebook</td>
+<td>12周26节课的经典机器学习课程</td>
+</tr>
+<tr>
+<td>153</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/sveltejs/svelte">sveltejs&#x2F;svelte</a></td>
+<td>87366</td>
+<td>JavaScript</td>
+<td>面向其余开发者的Web开发</td>
+</tr>
+<tr>
+<td>154</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/MunGell/awesome-for-beginners">MunGell&#x2F;awesome-for-beginners</a></td>
+<td>87048</td>
+<td>N&#x2F;A</td>
+<td>适合初学者的优秀项目列表</td>
+</tr>
+<tr>
+<td>155</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/astral-sh/uv">astral-sh&#x2F;uv</a></td>
+<td>86936</td>
+<td>Rust</td>
+<td>用Rust编写的极快Python包管理器</td>
+</tr>
+<tr>
+<td>156</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/zed-industries/zed">zed-industries&#x2F;zed</a></td>
+<td>86271</td>
+<td>Rust</td>
+<td>高速多人协作代码编辑器</td>
+</tr>
+<tr>
+<td>157</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/syncthing/syncthing">syncthing&#x2F;syncthing</a></td>
+<td>85951</td>
+<td>Go</td>
+<td>开源连续文件同步</td>
+</tr>
+<tr>
+<td>158</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/sherlock-project/sherlock">sherlock-project&#x2F;sherlock</a></td>
+<td>85941</td>
+<td>Python</td>
+<td>通过用户名跨社交网络搜索账号</td>
+</tr>
+<tr>
+<td>159</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Stirling-Tools/Stirling-PDF">Stirling-Tools&#x2F;Stirling-PDF</a></td>
+<td>85485</td>
+<td>Java</td>
+<td>在任何设备上编辑PDF的应用程序</td>
+</tr>
+<tr>
+<td>160</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/thedotmack/claude-mem">thedotmack&#x2F;claude-mem</a></td>
+<td>85283</td>
+<td>JavaScript</td>
+<td>跨会话持久化上下文记忆工具</td>
+</tr>
+<tr>
+<td>161</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ByteByteGoHq/system-design-101">ByteByteGoHq&#x2F;system-design-101</a></td>
+<td>85036</td>
+<td>N&#x2F;A</td>
+<td>用可视化方式解释复杂系统，备战系统设计面试</td>
+</tr>
+<tr>
+<td>162</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/vllm-project/vllm">vllm-project&#x2F;vllm</a></td>
+<td>84961</td>
+<td>Python</td>
+<td>高吞吐量低延迟的LLM推理引擎</td>
+</tr>
+<tr>
+<td>163</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/laravel/laravel">laravel&#x2F;laravel</a></td>
+<td>84524</td>
+<td>Blade</td>
+<td>富有表现力和优雅语法的Web应用框架</td>
+</tr>
+<tr>
+<td>164</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/localsend/localsend">localsend&#x2F;localsend</a></td>
+<td>84439</td>
+<td>Dart</td>
+<td>开源的跨平台AirDrop替代品</td>
+</tr>
+<tr>
+<td>165</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/PaddlePaddle/PaddleOCR">PaddlePaddle&#x2F;PaddleOCR</a></td>
+<td>84401</td>
+<td>Python</td>
+<td>将PDF和图片转为结构化数据的OCR工具包</td>
+</tr>
+<tr>
+<td>166</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/infiniflow/ragflow">infiniflow&#x2F;ragflow</a></td>
+<td>84000</td>
+<td>Go</td>
+<td>领先的开源RAG引擎</td>
+</tr>
+<tr>
+<td>167</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/macrozheng/mall">macrozheng&#x2F;mall</a></td>
+<td>83953</td>
+<td>Java</td>
+<td>基于Spring Boot的电商系统</td>
+</tr>
+<tr>
+<td>168</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/realworld-apps/realworld">realworld-apps&#x2F;realworld</a></td>
+<td>83684</td>
+<td>TypeScript</td>
+<td>全栈Medium克隆示例应用</td>
+</tr>
+<tr>
+<td>169</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/DopplerHQ/awesome-interview-questions">DopplerHQ&#x2F;awesome-interview-questions</a></td>
+<td>83354</td>
+<td>N&#x2F;A</td>
+<td>面试题精选列表</td>
+</tr>
+<tr>
+<td>170</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/bregman-arie/devops-exercises">bregman-arie&#x2F;devops-exercises</a></td>
+<td>82980</td>
+<td>Python</td>
+<td>DevOps面试问题和练习</td>
+</tr>
+<tr>
+<td>171</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/animate-css/animate.css">animate-css&#x2F;animate.css</a></td>
+<td>82631</td>
+<td>CSS</td>
+<td>跨浏览器的CSS动画库</td>
+</tr>
+<tr>
+<td>172</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Developer-Y/cs-video-courses">Developer-Y&#x2F;cs-video-courses</a></td>
+<td>82171</td>
+<td>N&#x2F;A</td>
+<td>带视频讲座的计算机科学课程列表</td>
+</tr>
+<tr>
+<td>173</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/tonsky/FiraCode">tonsky&#x2F;FiraCode</a></td>
+<td>81811</td>
+<td>Clojure</td>
+<td>带编程连字的等宽字体</td>
+</tr>
+<tr>
+<td>174</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/vitejs/vite">vitejs&#x2F;vite</a></td>
+<td>81641</td>
+<td>TypeScript</td>
+<td>下一代前端工具链</td>
+</tr>
+<tr>
+<td>175</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/fighting41love/funNLP">fighting41love&#x2F;funNLP</a></td>
+<td>81541</td>
+<td>Python</td>
+<td>NLP相关工具和数据集大全</td>
+</tr>
+<tr>
+<td>176</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/junegunn/fzf">junegunn&#x2F;fzf</a></td>
+<td>81361</td>
+<td>Go</td>
+<td>命令行模糊查找器</td>
+</tr>
+<tr>
+<td>177</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-boot">spring-projects&#x2F;spring-boot</a></td>
+<td>80989</td>
+<td>Java</td>
+<td>轻松创建Spring生产级应用</td>
+</tr>
+<tr>
+<td>178</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/mlabonne/llm-course">mlabonne&#x2F;llm-course</a></td>
+<td>80593</td>
+<td>N&#x2F;A</td>
+<td>大语言模型入门课程及路线图</td>
+</tr>
+<tr>
+<td>179</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/jesseduffield/lazygit">jesseduffield&#x2F;lazygit</a></td>
+<td>79882</td>
+<td>Go</td>
+<td>简单的终端Git界面</td>
+</tr>
+<tr>
+<td>180</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anuraghazra/github-readme-stats">anuraghazra&#x2F;github-readme-stats</a></td>
+<td>79777</td>
+<td>JavaScript</td>
+<td>GitHub Readme动态统计信息</td>
+</tr>
+<tr>
+<td>181</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/pewdiepie-archdaemon/odysseus">pewdiepie-archdaemon&#x2F;odysseus</a></td>
+<td>79759</td>
+<td>Python</td>
+<td>自托管的AI工作空间</td>
+</tr>
+<tr>
+<td>182</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/hoppscotch/hoppscotch">hoppscotch&#x2F;hoppscotch</a></td>
+<td>79698</td>
+<td>TypeScript</td>
+<td>开源API开发生态系统</td>
+</tr>
+<tr>
+<td>183</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/netdata/netdata">netdata&#x2F;netdata</a></td>
+<td>79444</td>
+<td>Go</td>
+<td>AI驱动的全栈可观测性平台</td>
+</tr>
+<tr>
+<td>184</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/lobehub/lobehub">lobehub&#x2F;lobehub</a></td>
+<td>79299</td>
+<td>TypeScript</td>
+<td>首席智能体运营官，组织你的AI团队</td>
+</tr>
+<tr>
+<td>185</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/doocs/advanced-java">doocs&#x2F;advanced-java</a></td>
+<td>78989</td>
+<td>Java</td>
+<td>Java高级开发者的核心面试问题与答案</td>
+</tr>
+<tr>
+<td>186</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/OpenHands/OpenHands">OpenHands&#x2F;OpenHands</a></td>
+<td>78912</td>
+<td>Python</td>
+<td>AI驱动的开发平台</td>
+</tr>
+<tr>
+<td>187</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/swisskyrepo/PayloadsAllTheThings">swisskyrepo&#x2F;PayloadsAllTheThings</a></td>
+<td>78823</td>
+<td>Python</td>
+<td>Web应用安全和渗透测试的Payload列表</td>
+</tr>
+<tr>
+<td>188</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/d2l-ai/d2l-zh">d2l-ai&#x2F;d2l-zh</a></td>
+<td>78604</td>
+<td>Python</td>
+<td>《动手学深度学习》中文版</td>
+</tr>
+<tr>
+<td>189</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/JuliusBrussee/caveman">JuliusBrussee&#x2F;caveman</a></td>
+<td>78433</td>
+<td>JavaScript</td>
+<td>通过洞穴人语言减少65%token消耗的Claude Code技能</td>
+</tr>
+<tr>
+<td>190</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/coder/code-server">coder&#x2F;code-server</a></td>
+<td>78149</td>
+<td>TypeScript</td>
+<td>浏览器中的VS Code</td>
+</tr>
+<tr>
+<td>191</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Z4nzu/hackingtool">Z4nzu&#x2F;hackingtool</a></td>
+<td>77911</td>
+<td>Python</td>
+<td>黑客工具合集</td>
+</tr>
+<tr>
+<td>192</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/tensorflow/models">tensorflow&#x2F;models</a></td>
+<td>77673</td>
+<td>Python</td>
+<td>用TensorFlow构建的模型和示例</td>
+</tr>
+<tr>
+<td>193</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ventoy/Ventoy">ventoy&#x2F;Ventoy</a></td>
+<td>77672</td>
+<td>C</td>
+<td>新一代可启动USB解决方案</td>
+</tr>
+<tr>
+<td>194</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/nomic-ai/gpt4all">nomic-ai&#x2F;gpt4all</a></td>
+<td>77378</td>
+<td>C++</td>
+<td>在任何设备上运行本地LLM</td>
+</tr>
+<tr>
+<td>195</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/elastic/elasticsearch">elastic&#x2F;elasticsearch</a></td>
+<td>77142</td>
+<td>Java</td>
+<td>免费开源的分布式RESTful搜索引擎</td>
+</tr>
+<tr>
+<td>196</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/FortAwesome/Font-Awesome">FortAwesome&#x2F;Font-Awesome</a></td>
+<td>76698</td>
+<td>JavaScript</td>
+<td>标志性SVG、字体和CSS工具包</td>
+</tr>
+<tr>
+<td>197</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/MisterBooo/LeetCodeAnimation">MisterBooo&#x2F;LeetCodeAnimation</a></td>
+<td>76609</td>
+<td>Java</td>
+<td>用动画演示LeetCode题目思路</td>
+</tr>
+<tr>
+<td>198</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/awesomedata/awesome-public-datasets">awesomedata&#x2F;awesome-public-datasets</a></td>
+<td>76382</td>
+<td>N&#x2F;A</td>
+<td>高质量开放数据集列表</td>
+</tr>
+<tr>
+<td>199</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/sdmg15/Best-websites-a-programmer-should-visit">sdmg15&#x2F;Best-websites-a-programmer-should-visit</a></td>
+<td>76216</td>
+<td>N&#x2F;A</td>
+<td>程序员应该访问的有用网站</td>
+</tr>
+<tr>
+<td>200</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/dair-ai/Prompt-Engineering-Guide">dair-ai&#x2F;Prompt-Engineering-Guide</a></td>
+<td>76108</td>
+<td>MDX</td>
+<td>提示工程指南和资源</td>
+</tr>
+<tr>
+<td>201</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ruvnet/RuView">ruvnet&#x2F;RuView</a></td>
+<td>76025</td>
+<td>Rust</td>
+<td>将WiFi信号转化为实时空间智能</td>
+</tr>
+<tr>
+<td>202</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/nestjs/nest">nestjs&#x2F;nest</a></td>
+<td>75930</td>
+<td>TypeScript</td>
+<td>高效可扩展的Node.js服务端框架</td>
+</tr>
+<tr>
+<td>203</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/bytedance/deer-flow">bytedance&#x2F;deer-flow</a></td>
+<td>75694</td>
+<td>Python</td>
+<td>开源长周期超智能体框架</td>
+</tr>
+<tr>
+<td>204</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/typicode/json-server">typicode&#x2F;json-server</a></td>
+<td>75632</td>
+<td>JavaScript</td>
+<td>零编码30秒内获取完整REST API</td>
+</tr>
+<tr>
+<td>205</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/redis/redis">redis&#x2F;redis</a></td>
+<td>75203</td>
+<td>C</td>
+<td>最快最丰富的缓存和数据结构服务器</td>
+</tr>
+<tr>
+<td>206</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/grafana/grafana">grafana&#x2F;grafana</a></td>
+<td>75157</td>
+<td>TypeScript</td>
+<td>开源可观测性和数据可视化平台</td>
+</tr>
+<tr>
+<td>207</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/TapXWorld/ChinaTextbook">TapXWorld&#x2F;ChinaTextbook</a></td>
+<td>75125</td>
+<td>Roff</td>
+<td>中国中小学PDF电子教材</td>
+</tr>
+<tr>
+<td>208</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/tesseract-ocr/tesseract">tesseract-ocr&#x2F;tesseract</a></td>
+<td>75032</td>
+<td>C++</td>
+<td>开源OCR引擎</td>
+</tr>
+<tr>
+<td>209</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/safishamsi/graphify">safishamsi&#x2F;graphify</a></td>
+<td>74999</td>
+<td>Python</td>
+<td>将代码文件夹转为可查询知识图谱的AI技能</td>
+</tr>
+<tr>
+<td>210</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/openai-cookbook">openai&#x2F;openai-cookbook</a></td>
+<td>74488</td>
+<td>Jupyter Notebook</td>
+<td>使用OpenAI API的示例和指南</td>
+</tr>
+<tr>
+<td>211</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ocornut/imgui">ocornut&#x2F;imgui</a></td>
+<td>74206</td>
+<td>C++</td>
+<td>Dear ImGui：C++无臃肿GUI</td>
+</tr>
+<tr>
+<td>212</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/unionlabs/union">unionlabs&#x2F;union</a></td>
+<td>73932</td>
+<td>Rust</td>
+<td>去信任的零知识跨链桥接协议</td>
+</tr>
+<tr>
+<td>213</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/enaqx/awesome-react">enaqx&#x2F;awesome-react</a></td>
+<td>73804</td>
+<td>N&#x2F;A</td>
+<td>React生态系统的精选资源集合</td>
+</tr>
+<tr>
+<td>214</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/caddyserver/caddy">caddyserver&#x2F;caddy</a></td>
+<td>73641</td>
+<td>Go</td>
+<td>自动HTTPS的多平台HTTP服务器</td>
+</tr>
+<tr>
+<td>215</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/apache/superset">apache&#x2F;superset</a></td>
+<td>73602</td>
+<td>TypeScript</td>
+<td>数据可视化和探索平台</td>
+</tr>
+<tr>
+<td>216</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/obsproject/obs-studio">obsproject&#x2F;obs-studio</a></td>
+<td>73572</td>
+<td>C</td>
+<td>免费开源的直播和录屏软件</td>
+</tr>
+<tr>
+<td>217</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/vuejs/awesome-vue">vuejs&#x2F;awesome-vue</a></td>
+<td>73562</td>
+<td>N&#x2F;A</td>
+<td>Vue.js相关精选列表</td>
+</tr>
+<tr>
+<td>218</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/nexu-io/open-design">nexu-io&#x2F;open-design</a></td>
+<td>73543</td>
+<td>TypeScript</td>
+<td>本地优先的开源Claude Design替代品</td>
+</tr>
+<tr>
+<td>219</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/twitter/the-algorithm">twitter&#x2F;the-algorithm</a></td>
+<td>73480</td>
+<td>Scala</td>
+<td>X推荐算法源代码</td>
+</tr>
+<tr>
+<td>220</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/PKUFlyingPig/cs-self-learning">PKUFlyingPig&#x2F;cs-self-learning</a></td>
+<td>73423</td>
+<td>HTML</td>
+<td>北京大学计算机自学指南</td>
+</tr>
+<tr>
+<td>221</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/python/cpython">python&#x2F;cpython</a></td>
+<td>73396</td>
+<td>Python</td>
+<td>Python编程语言</td>
+</tr>
+<tr>
+<td>222</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/CompVis/stable-diffusion">CompVis&#x2F;stable-diffusion</a></td>
+<td>73153</td>
+<td>Jupyter Notebook</td>
+<td>潜在文本到图像扩散模型</td>
+</tr>
+<tr>
+<td>223</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/AppFlowy-IO/AppFlowy">AppFlowy-IO&#x2F;AppFlowy</a></td>
+<td>73142</td>
+<td>Dart</td>
+<td>AI协作工作空间，开源Notion替代品</td>
+</tr>
+<tr>
+<td>224</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/josephmisiti/awesome-machine-learning">josephmisiti&#x2F;awesome-machine-learning</a></td>
+<td>73132</td>
+<td>Python</td>
+<td>机器学习框架和软件精选列表</td>
+</tr>
+<tr>
+<td>225</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/abi/screenshot-to-code">abi&#x2F;screenshot-to-code</a></td>
+<td>73120</td>
+<td>Python</td>
+<td>截屏转代码（HTML&#x2F;Tailwind&#x2F;React&#x2F;Vue）</td>
+</tr>
+<tr>
+<td>226</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/thedaviddias/Front-End-Checklist">thedaviddias&#x2F;Front-End-Checklist</a></td>
+<td>73083</td>
+<td>MDX</td>
+<td>现代Web开发的必备清单</td>
+</tr>
+<tr>
+<td>227</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/hiyouga/LlamaFactory">hiyouga&#x2F;LlamaFactory</a></td>
+<td>72859</td>
+<td>Python</td>
+<td>高效微调100+LLM和VLM的统一框架</td>
+</tr>
+<tr>
+<td>228</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/opendatalab/MinerU">opendatalab&#x2F;MinerU</a></td>
+<td>72685</td>
+<td>Python</td>
+<td>将PDF和Office文档转为LLM可用的markdown&#x2F;JSON</td>
+</tr>
+<tr>
+<td>229</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/strapi/strapi">strapi&#x2F;strapi</a></td>
+<td>72580</td>
+<td>TypeScript</td>
+<td>领先的开源无头CMS</td>
+</tr>
+<tr>
+<td>230</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Eugeny/tabby">Eugeny&#x2F;tabby</a></td>
+<td>72509</td>
+<td>TypeScript</td>
+<td>面向现代时代的终端</td>
+</tr>
+<tr>
+<td>231</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/paperclipai/paperclip">paperclipai&#x2F;paperclip</a></td>
+<td>72373</td>
+<td>TypeScript</td>
+<td>管理工作中智能体的开源应用</td>
+</tr>
+<tr>
+<td>232</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/daytonaio/daytona">daytonaio&#x2F;daytona</a></td>
+<td>72329</td>
+<td>N&#x2F;A</td>
+<td>运行AI生成代码的安全弹性基础设施</td>
+</tr>
+<tr>
+<td>233</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/binhnguyennus/awesome-scalability">binhnguyennus&#x2F;awesome-scalability</a></td>
+<td>72146</td>
+<td>N&#x2F;A</td>
+<td>可伸缩可靠高性能大规模系统的模式</td>
+</tr>
+<tr>
+<td>234</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/fffaraz/awesome-cpp">fffaraz&#x2F;awesome-cpp</a></td>
+<td>72043</td>
+<td>N&#x2F;A</td>
+<td>C&#x2F;C++框架、库和资源的精选列表</td>
+</tr>
+<tr>
+<td>235</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/danielmiessler/SecLists">danielmiessler&#x2F;SecLists</a></td>
+<td>71853</td>
+<td>PHP</td>
+<td>安全评估使用的多类型列表集合</td>
+</tr>
+<tr>
+<td>236</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/hakimel/reveal.js">hakimel&#x2F;reveal.js</a></td>
+<td>71840</td>
+<td>JavaScript</td>
+<td>HTML演示文稿框架</td>
+</tr>
+<tr>
+<td>237</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/pallets/flask">pallets&#x2F;flask</a></td>
+<td>71788</td>
+<td>Python</td>
+<td>Python微Web框架</td>
+</tr>
+<tr>
+<td>238</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/moby/moby">moby&#x2F;moby</a></td>
+<td>71757</td>
+<td>Go</td>
+<td>容器生态协作项目</td>
+</tr>
+<tr>
+<td>239</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/protocolbuffers/protobuf">protocolbuffers&#x2F;protobuf</a></td>
+<td>71439</td>
+<td>C++</td>
+<td>Google数据交换格式</td>
+</tr>
+<tr>
+<td>240</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/binary-husky/gpt_academic">binary-husky&#x2F;gpt_academic</a></td>
+<td>71010</td>
+<td>Python</td>
+<td>为GPT&#x2F;GLM提供实用化交互界面的工具</td>
+</tr>
+<tr>
+<td>241</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/nektos/act">nektos&#x2F;act</a></td>
+<td>70900</td>
+<td>Go</td>
+<td>在本地运行GitHub Actions</td>
+</tr>
+<tr>
+<td>242</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/unclecode/crawl4ai">unclecode&#x2F;crawl4ai</a></td>
+<td>70577</td>
+<td>Python</td>
+<td>开源LLM友好的网络爬虫工具</td>
+</tr>
+<tr>
+<td>243</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/juliangarnier/anime">juliangarnier&#x2F;anime</a></td>
+<td>70561</td>
+<td>JavaScript</td>
+<td>JavaScript动画引擎</td>
+</tr>
+<tr>
+<td>244</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NationalSecurityAgency/ghidra">NationalSecurityAgency&#x2F;ghidra</a></td>
+<td>70319</td>
+<td>Java</td>
+<td>软件逆向工程框架</td>
+</tr>
+<tr>
+<td>245</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/swiftlang/swift">swiftlang&#x2F;swift</a></td>
+<td>70124</td>
+<td>Swift</td>
+<td>Swift编程语言</td>
+</tr>
+<tr>
+<td>246</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/toeverything/AFFiNE">toeverything&#x2F;AFFiNE</a></td>
+<td>69938</td>
+<td>TypeScript</td>
+<td>下一代知识库，比Notion和Miro更多可能</td>
+</tr>
+<tr>
+<td>247</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Egonex-AI/Understand-Anything">Egonex-AI&#x2F;Understand-Anything</a></td>
+<td>69908</td>
+<td>TypeScript</td>
+<td>将代码转为可交互的知识图谱</td>
+</tr>
+<tr>
+<td>248</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/OpenBB-finance/OpenBB">OpenBB-finance&#x2F;OpenBB</a></td>
+<td>69894</td>
+<td>Python</td>
+<td>分析师和AI智能体的金融数据平台</td>
+</tr>
+<tr>
+<td>249</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/DietrichGebert/ponytail">DietrichGebert&#x2F;ponytail</a></td>
+<td>69550</td>
+<td>JavaScript</td>
+<td>让你的AI智能体像最懒的高级开发者一样思考</td>
+</tr>
+<tr>
+<td>250</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/prakhar1989/awesome-courses">prakhar1989&#x2F;awesome-courses</a></td>
+<td>69414</td>
+<td>N&#x2F;A</td>
+<td>学习计算机科学的优秀大学课程列表</td>
+</tr>
+</tbody></table>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.bugmakerhub.xyz">老酒馆的馆长大人</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.bugmakerhub.xyz/2026/07/06/github-top250/">https://blog.bugmakerhub.xyz/2026/07/06/github-top250/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://blog.bugmakerhub.xyz" target="_blank">BugMakerHub</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/GitHub/">GitHub</a><a class="post-meta__tags" href="/tags/%E5%BC%80%E6%BA%90/">开源</a><a class="post-meta__tags" href="/tags/%E6%8E%92%E8%A1%8C%E6%A6%9C/">排行榜</a></div><div class="post-share"><div class="social-share" data-image="/img/cute.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/07/06/Hexo%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/" title="Hexo配置教程"><img class="cover" src="https://cdn.jsdelivr.net/gh/jiangyie/bugmakerhub-repo@main/img/cover/hexo-config.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Hexo配置教程</div></div><div class="info-2"><div class="info-item-1">侧边栏最新评论_config.butterfly.yml → aside → card_newest_comments： 123456card_newest_comments:    enable: true    sort_order:    limit: 6    storage: 10    avatar: true   </div></div></div></a><a class="pagination-related" href="/2026/07/05/%E5%B7%A5%E5%85%B7%E7%9B%92%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/" title="工具盒配置教程"><img class="cover" src="/img/cute3.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">工具盒配置教程</div></div><div class="info-2"><div class="info-item-1">工具盒是一个可自定义的导航页面，支持站点收藏、搜索引擎切换、分类管理。所有配置通过两个 YAML 数据文件完成，无需修改代码。 文件位置123456source/├── _data/│   ├── navi.yml          # 导航站点数据│   └── navi_search.yml   # 搜索引擎数据└── navi/    └── index.md          # 页面入口（仅一行: &#123;% navi %&#125;）  导航配置 (navi.yml)平铺分类分类下直接列出站点，适合无子分类的简单分组： 123456789开发社区:  - name: Stack Overflow    url: https://stackoverflow.com/    icon: https://cdn.jsdelivr.net/gh/Yafine/cdn@3.2.1/source/box/images/logo/stackoverflow.png    desc: 全球最受程序员欢迎的开发社区  - name: CSDN    url: https://www...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">老酒馆的馆长大人</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/" target="_blank" title="Github"><i class="fab fa-github" style="color: #hdhfbb;"></i></a><a class="social-icon" href="/959972276@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">🍇欢迎大家关注这个博客！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/07/13/yuque/HTTPS-%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE/" title="HTTPS-自签名证书配置"><img src="/img/cute3.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HTTPS-自签名证书配置"/></a><div class="content"><a class="title" href="/2026/07/13/yuque/HTTPS-%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE/" title="HTTPS-自签名证书配置">HTTPS-自签名证书配置</a><time datetime="2026-07-13T02:57:06.000Z" title="发表于 2026-07-13 10:57:06">2026-07-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/07/13/yuque/Knowledge-Base/" title="Knowledge-Base"><img src="/img/cute.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Knowledge-Base"/></a><div class="content"><a class="title" href="/2026/07/13/yuque/Knowledge-Base/" title="Knowledge-Base">Knowledge-Base</a><time datetime="2026-07-13T02:57:06.000Z" title="发表于 2026-07-13 10:57:06">2026-07-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/07/13/yuque/OpenClaw%E6%95%99%E7%A8%8B/" title="OpenClaw教程"><img src="/img/cute3.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OpenClaw教程"/></a><div class="content"><a class="title" href="/2026/07/13/yuque/OpenClaw%E6%95%99%E7%A8%8B/" title="OpenClaw教程">OpenClaw教程</a><time datetime="2026-07-13T02:57:06.000Z" title="发表于 2026-07-13 10:57:06">2026-07-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/07/13/yuque/openclaw%E4%BD%BF%E7%94%A8/" title="openclaw使用"><img src="/img/cute.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="openclaw使用"/></a><div class="content"><a class="title" href="/2026/07/13/yuque/openclaw%E4%BD%BF%E7%94%A8/" title="openclaw使用">openclaw使用</a><time datetime="2026-07-13T02:57:06.000Z" title="发表于 2026-07-13 10:57:06">2026-07-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/07/13/hello-world/" title="Hello World"><img src="/img/cute3.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2026/07/13/hello-world/" title="Hello World">Hello World</a><time datetime="2026-07-13T01:16:45.834Z" title="发表于 2026-07-13 09:16:45">2026-07-13</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/cute.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 老酒馆的馆长大人</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.5</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.5"></script><script src="/js/main.js?v=5.5.5"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline.bugmakerhub.xyz/',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.15.2/dist/waline.min.css')
+        .then(() => import('https://cdn.jsdelivr.net/npm/@waline/client@3.15.2/dist/waline.min.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.5"></script></div></div></body></html>
