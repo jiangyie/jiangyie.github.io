@@ -1,0 +1,305 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Git使用记录 | BugMakerHub</title><meta name="author" content="老酒馆的馆长大人"><meta name="copyright" content="老酒馆的馆长大人"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content=".gitignore文件语法规范  #：开头的行表示注释行 *：用来匹配零个或多个字符 *.a：表示忽略.a文件 *.[oa]：表示忽略所有以.a和.o结尾的文件，*~忽略所有以~结尾的文件   []：用来匹配括号内的任一字符，如 [abc]，也可以在括号内加连接符，如 [0-9] 匹配0至9的数 ?：用来匹配单个字符 !：用来否定忽略 比如前面用了 *.txt，然后使用 !*a.txt，则这个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git使用记录">
+<meta property="og:url" content="https://blog.bugmakerhub.xyz/2026/07/16/yuque/Git%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="BugMakerHub">
+<meta property="og:description" content=".gitignore文件语法规范  #：开头的行表示注释行 *：用来匹配零个或多个字符 *.a：表示忽略.a文件 *.[oa]：表示忽略所有以.a和.o结尾的文件，*~忽略所有以~结尾的文件   []：用来匹配括号内的任一字符，如 [abc]，也可以在括号内加连接符，如 [0-9] 匹配0至9的数 ?：用来匹配单个字符 !：用来否定忽略 比如前面用了 *.txt，然后使用 !*a.txt，则这个">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog.bugmakerhub.xyz/img/cover/cover9.png">
+<meta property="article:published_time" content="2026-07-16T02:52:01.000Z">
+<meta property="article:modified_time" content="2026-07-16T02:55:40.992Z">
+<meta property="article:author" content="老酒馆的馆长大人">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.bugmakerhub.xyz/img/cover/cover9.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Git使用记录",
+  "url": "https://blog.bugmakerhub.xyz/2026/07/16/yuque/Git%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/",
+  "image": "https://blog.bugmakerhub.xyz/img/cover/cover9.png",
+  "datePublished": "2026-07-16T02:52:01.000Z",
+  "dateModified": "2026-07-16T02:55:40.992Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "老酒馆的馆长大人",
+      "url": "https://blog.bugmakerhub.xyz"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/cute2.png"><link rel="canonical" href="https://blog.bugmakerhub.xyz/2026/07/16/yuque/Git%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.5"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Git使用记录',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/img/background.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/shuoshuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/navi/"><i class="fa-fw fas fa-cube"></i><span> 工具盒</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cute.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">BugMakerHub</span></a><a class="nav-page-title" href="/"><span class="site-name">Git使用记录</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/shuoshuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/navi/"><i class="fa-fw fas fa-cube"></i><span> 工具盒</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Git使用记录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-16T02:52:01.000Z" title="发表于 2026-07-16 10:52:01">2026-07-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-16T02:55:40.992Z" title="更新于 2026-07-16 10:55:40">2026-07-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="gitignore文件"><a href="#gitignore文件" class="headerlink" title=".gitignore文件"></a>.gitignore文件</h2><p><em>语法规范</em></p>
+<ul>
+<li><code>#</code>：开头的行表示注释行</li>
+<li><code>*</code>：用来匹配零个或多个字符<ul>
+<li><code>*.a</code>：表示忽略.a文件</li>
+<li><code>*.[oa]</code>：表示忽略所有以.a和.o结尾的文件，<code>*~</code>忽略所有以~结尾的文件</li>
+</ul>
+</li>
+<li><code>[]</code>：用来匹配括号内的任一字符，如 <code>[abc]</code>，也可以在括号内加连接符，如 <code>[0-9]</code> 匹配0至9的数</li>
+<li><code>?</code>：用来匹配单个字符</li>
+<li><code>!</code>：用来否定忽略<ul>
+<li>比如前面用了 <code>*.txt</code>，然后使用 <code>!*a.txt</code>，则这个 <code>a.txt</code> 不会被忽略</li>
+</ul>
+</li>
+<li><code>/</code>：<ul>
+<li>正斜杠在前：匹配项目跟目录；如 <code>/bin</code> 表示忽略根目录下的bin文件，<code>/bsp</code> 表示忽略根目录下的bsp文件夹，但不忽略子目录里的 <code>user/bsp</code> 文件夹</li>
+<li>正斜杠在后：匹配文件夹以及在该文件夹路径下的内容，但是不匹配该文件；如 <code>bsp/</code> 表示忽略bsp文件夹里的所有文件</li>
+</ul>
+</li>
+<li><code>**</code>：匹配多级目录，可在开始，中间，结束</li>
+</ul>
+<p><em>常用例子</em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"># 忽略所有的.bin文件</span><br><span class="line">*.bin</span><br><span class="line"></span><br><span class="line"># 不忽略目录下的link.bin</span><br><span class="line">!link.bin</span><br><span class="line"></span><br><span class="line"># 不忽略obj目录下的link.bin</span><br><span class="line">!/obj/link.bin</span><br><span class="line"></span><br><span class="line"># 忽略doc/notes.txt, 不包括doc/server/arch.txt</span><br><span class="line">doc/*.txt</span><br><span class="line"></span><br><span class="line"># 忽略/foo, a/foo, a/b/foo等</span><br><span class="line">**/foo</span><br><span class="line"></span><br><span class="line"># 忽略a/b, a/x/b, a/x/y/b等</span><br><span class="line">a/**/b</span><br><span class="line"></span><br><span class="line"># 忽略当前路径的 config.php 文件</span><br><span class="line">config.php</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建通用忽略文件"><a href="#创建通用忽略文件" class="headerlink" title="创建通用忽略文件"></a>创建通用忽略文件</h2><ol>
+<li>在任意目录都可以创建（尽量放在不易被勿删的目录下即可），创建 <code>xxx.ignore</code> 文件，在文件中添加忽略的文件后缀</li>
+</ol>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*.class</span><br><span class="line">*.log</span><br><span class="line">*.jar</span><br><span class="line">*.war</span><br><span class="line">*.zip</span><br><span class="line">*.idea</span><br><span class="line">*.iml</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>打开 <code>C:\Users\JYE</code> 目录，打开 <code>.gitconfig</code> 文件，配置忽略文件地址</li>
+</ol>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[user]</span></span><br><span class="line">	<span class="attr">email</span> = <span class="number">959972276</span>@qq.com</span><br><span class="line">	<span class="attr">name</span> = jye</span><br><span class="line"></span><br><span class="line"><span class="section">[core]</span></span><br><span class="line">	<span class="attr">excludesfile</span> = D:/WorkSpace/GitProject/git.ignore</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>注意</strong>：<ul>
+<li>配置路径时，必须是斜杠（<code>/</code>），否则会有异常</li>
+</ul>
+</li>
+</ul>
+<h2 id="git配置ssh免密"><a href="#git配置ssh免密" class="headerlink" title="git配置ssh免密"></a>git配置ssh免密</h2><ul>
+<li>Gitee 提供了基于SSH协议的Git服务，在使用SSH协议访问仓库之前，需要先配置好账户&#x2F;仓库的SSH公钥</li>
+<li>在一个不会被误删的文件夹下生成sshkey</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C &quot;xxxxx@xxxxx.com&quot;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Generating public/private ed25519 key pair...</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：这里的 <a href="mailto:&#120;&#120;&#x78;&#120;&#x78;&#64;&#120;&#x78;&#x78;&#x78;&#120;&#46;&#99;&#x6f;&#x6d;">xxxxx@xxxxx.com</a> 只是生成的 sshkey 的名称，并不约束或要求具体命名为某个邮箱。现网的大部分教程均讲解的使用邮箱生成，其一开始的初衷仅仅是为了便于辨识所以使用了邮箱。</p>
+</blockquote>
+<ul>
+<li>按照提示完成三次回车，即可生成 ssh key</li>
+<li>复制生成后的 ssh key，通过仓库主页 <strong>「管理」-&gt;「部署公钥管理」-&gt;「添加部署公钥」</strong> ，添加生成的 public key 添加到仓库中</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/jiangyie/bugmakerhub-repo@main/img/yuque/1670552175373-95170908-e06f-444d-82a5-9a50a2a8b093.png" alt="Gitee添加部署公钥"></p>
+<ul>
+<li>添加后，在终端（Terminal）中输入</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@gitee.com</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>首次使用需要确认并添加主机到本机SSH可信列表。若返回 <code>Hi XXX! You&#39;ve successfully authenticated, but Gitee.com does not provide shell access.</code> 内容，则证明添加成功</li>
+</ul>
+<h2 id="github搜索技巧"><a href="#github搜索技巧" class="headerlink" title="github搜索技巧"></a>github搜索技巧</h2><h3 id="按条件筛选"><a href="#按条件筛选" class="headerlink" title="按条件筛选"></a>按条件筛选</h3><h4 id="找星星最多的"><a href="#找星星最多的" class="headerlink" title="找星星最多的"></a>找星星最多的</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stars:&gt;1000 关键词</span><br><span class="line">stars:50000..100000</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jiangyie/bugmakerhub-repo@main/img/yuque/1784169667748-8a6d83de-012d-409d-8a4f-5f83037ba8b7.png" alt="GitHub按Stars搜索"></p>
+<h4 id="按语言"><a href="#按语言" class="headerlink" title="按语言"></a>按语言</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">language:python 关键词</span><br><span class="line">language:typescript</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jiangyie/bugmakerhub-repo@main/img/yuque/1784169693571-aba9fd9d-6264-4d04-bf2e-49c6d8ab1bea.png" alt="GitHub按语言搜索"></p>
+<h4 id="按时间"><a href="#按时间" class="headerlink" title="按时间"></a>按时间</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">created:&gt;2025-01-01</span><br><span class="line">pushed:&gt;2026-06-01    # 近期有更新的</span><br><span class="line">updated:&gt;=2026-01-01</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jiangyie/bugmakerhub-repo@main/img/yuque/1784169801937-ba3e9c3c-5a1d-4047-9e57-07f147b2742a.png" alt="GitHub按时间搜索"></p>
+<h4 id="按大小"><a href="#按大小" class="headerlink" title="按大小"></a>按大小</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">size:&gt;1000            # 大于 1000 KB</span><br><span class="line">size:&lt;100</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jiangyie/bugmakerhub-repo@main/img/yuque/1784169784260-4e259305-82cf-45d4-9555-bacae267e0e6.png" alt="GitHub按大小搜索"></p>
+<h4 id="组合搜索实战"><a href="#组合搜索实战" class="headerlink" title="组合搜索实战"></a>组合搜索实战</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 找近半年活跃的 Python Web 框架</span><br><span class="line">language:python pushed:&gt;2026-01-01 web framework</span><br><span class="line"></span><br><span class="line"># 找 Star 超 10 万的 TypeScript 项目</span><br><span class="line">language:typescript stars:&gt;100000</span><br><span class="line"></span><br><span class="line"># 找特定作者/组织的项目</span><br><span class="line">org:facebook</span><br><span class="line">user:torvalds</span><br><span class="line">user:antirez repo:redis/redis</span><br><span class="line"></span><br><span class="line"># 找中文文档的项目</span><br><span class="line">readme:中文  stars:&gt;1000</span><br><span class="line"></span><br><span class="line"># 找最近更新的 AI 项目</span><br><span class="line">pushed:&gt;2026-04-01 stars:&gt;5000 AI</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jiangyie/bugmakerhub-repo@main/img/yuque/1784169825461-19a22ac7-a16c-4974-83d8-18ebd660469f.png" alt="GitHub组合搜索"></p>
+<h3 id="代码搜索"><a href="#代码搜索" class="headerlink" title="代码搜索"></a>代码搜索</h3><p>GitHub也能够搜索内容</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">关键词 language:python</span><br><span class="line">关键词 repo:owner/name</span><br><span class="line">关键词 extension:js</span><br><span class="line">关键词 filename:docker-compose.yml</span><br></pre></td></tr></table></figure>
+
+<p>最佳实战组合</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 找高质量 Python 库</span><br><span class="line">stars:&gt;5000 language:python pushed:&gt;2025-01-01</span><br><span class="line"></span><br><span class="line"># 找小而美的工具</span><br><span class="line">stars:100..1000 size:&lt;500 language:go</span><br><span class="line"></span><br><span class="line"># 找国产优质项目</span><br><span class="line">stars:&gt;500 pushed:&gt;2024-01-01 readme:中文</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jiangyie/bugmakerhub-repo@main/img/yuque/1784169882664-cc396e70-1ebe-4950-af06-e9684085818b.png" alt="GitHub代码搜索"></p>
+<h2 id="git异常记录"><a href="#git异常记录" class="headerlink" title="git异常记录"></a>git异常记录</h2><h3 id="pre-receive-hook-declined"><a href="#pre-receive-hook-declined" class="headerlink" title="pre-receive hook declined"></a>pre-receive hook declined</h3><p>在推送到远程分支时报错：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">! [remote rejected] master -&gt; master (pre-receive hook declined)</span><br></pre></td></tr></table></figure>
+
+<p>究其原因，就是用户权限不足，无法 push 代码到 <code>master</code> 分支上。只要将用户角色设置成 Master、Owner 等含有 <code>master</code> 分支操作的权限即可。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.bugmakerhub.xyz">老酒馆的馆长大人</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.bugmakerhub.xyz/2026/07/16/yuque/Git%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/">https://blog.bugmakerhub.xyz/2026/07/16/yuque/Git%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://blog.bugmakerhub.xyz" target="_blank">BugMakerHub</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="post-share"><div class="social-share" data-image="/img/cover/cover9.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/07/15/yuque/Dockerfile%E5%88%B6%E4%BD%9C%E9%95%9C%E5%83%8F/" title="Dockerfile制作镜像"><img class="cover" src="/img/cover/cover4.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Dockerfile制作镜像</div></div><div class="info-2"><div class="info-item-1">构建自定义镜像docker目前镜像的制作有俩种方法：  基于Docker Commit制作镜像 基于dockerfile制作镜像，Dockerfile方式为主流的制作镜像方式  Commit构建镜像使用 commit 构建自定义镜像：就是将 docker 容器构建成 docker 镜像。 1docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]   参数说明 -a 标注作者 -m 说明注释   示例  1docker commit -a &quot;jye&quot; -m &quot;这是一个tomcat&quot; tomcat-8080 tomcat:8080   Dockerfile构建镜像dockerfile构建自定义镜像示例  dockerfile  1234567# this is a dockerfileFROM centos:7MAINTAINER XD 123456@qq.comRUN echo &quot;正在构建镜像！！！&quot;WORKDIR /home/xdclassCOPY 123.txt /ho...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/07/15/yuque/Dockerfile%E5%88%B6%E4%BD%9C%E9%95%9C%E5%83%8F/" title="Dockerfile制作镜像"><img class="cover" src="/img/cover/cover4.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-07-15</div><div class="info-item-2">Dockerfile制作镜像</div></div><div class="info-2"><div class="info-item-1">构建自定义镜像docker目前镜像的制作有俩种方法：  基于Docker Commit制作镜像 基于dockerfile制作镜像，Dockerfile方式为主流的制作镜像方式  Commit构建镜像使用 commit 构建自定义镜像：就是将 docker 容器构建成 docker 镜像。 1docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]   参数说明 -a 标注作者 -m 说明注释   示例  1docker commit -a &quot;jye&quot; -m &quot;这是一个tomcat&quot; tomcat-8080 tomcat:8080   Dockerfile构建镜像dockerfile构建自定义镜像示例  dockerfile  1234567# this is a dockerfileFROM centos:7MAINTAINER XD 123456@qq.comRUN echo &quot;正在构建镜像！！！&quot;WORKDIR /home/xdclassCOPY 123.txt /ho...</div></div></div></a><a class="pagination-related" href="/2026/07/05/%E5%B7%A5%E5%85%B7%E7%9B%92%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/" title="工具盒配置教程"><img class="cover" src="/img/cover/cover5.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-07-05</div><div class="info-item-2">工具盒配置教程</div></div><div class="info-2"><div class="info-item-1">工具盒是一个可自定义的导航页面，支持站点收藏、搜索引擎切换、分类管理。所有配置通过两个 YAML 数据文件完成，无需修改代码。 文件位置123456source/├── _data/│   ├── navi.yml          # 导航站点数据│   └── navi_search.yml   # 搜索引擎数据└── navi/    └── index.md          # 页面入口（仅一行: &#123;% navi %&#125;）  导航配置 (navi.yml)平铺分类分类下直接列出站点，适合无子分类的简单分组： 123456789开发社区:  - name: Stack Overflow    url: https://stackoverflow.com/    icon: https://cdn.jsdelivr.net/gh/Yafine/cdn@3.2.1/source/box/images/logo/stackoverflow.png    desc: 全球最受程序员欢迎的开发社区  - name: CSDN    url: https://www...</div></div></div></a><a class="pagination-related" href="/2026/07/13/yuque/OpenClaw%E6%95%99%E7%A8%8B/" title="OpenClaw教程"><img class="cover" src="/img/cover/cover2.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-07-13</div><div class="info-item-2">OpenClaw教程</div></div><div class="info-2"><div class="info-item-1">介绍官网地址：https://clawd.org.cn/  安装部署windowsNode.js安装  访问Node.js官网 https://nodejs.org/    运行安装包 勾选“Automatically install the necessary tools” 以便自动安装编译工具   安装完成后，管理员身份打开PowerShell，验证安装  12node --versionnpm --version   配置npm国内镜像-加速下载  1npm config set registry https://registry.npmmirror.com    OpenClaw安装  执行安装命令  1npm install -g openclaw@latest   验证是否安装成功  1openclaw -v   配置向导  1openclaw onboard  linux 更新系统包列表  1sudo apt update &amp;&amp; sudo apt upgrade -y   安装编译工具和基础依赖（Node 编译必需）  1sudo apt insta...</div></div></div></a><a class="pagination-related" href="/2026/07/13/yuque/Knowledge-Base/" title="Knowledge-Base"><img class="cover" src="/img/cover/cover5.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-07-13</div><div class="info-item-2">Knowledge-Base</div></div><div class="info-2"><div class="info-item-1"> id: GUIDE-KnowledgeBase-Usagetitle: 知识库使用指南type: guidestatus: stablecreated: 2026-06-30updated: 2026-06-30  📖 知识库使用指南 基于 Knowledge-Base 协议 + bot-url-question-router 行为规则服务器：京东云 | 工作空间：&#x2F;root&#x2F;notes&#x2F;   一、知识库结构1234567891011121314151617181920212223242526272829/root/notes/├── README.md                      # 仓库总览├── 知识库使用指南.md               # ← 就是本文└── Notes/    ├── 00-Inbox/                  # 📥 收集箱 - 临时内容，7天内归档    ├── 01-Daily/                  # 📅 日报 - 当天事实记录    │   └── DAILY-...</div></div></div></a><a class="pagination-related" href="/2026/07/15/yuque/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/" title="微信公众号开发"><img class="cover" src="/img/cover/cover6.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-07-15</div><div class="info-item-2">微信公众号开发</div></div><div class="info-2"><div class="info-item-1">介绍微信公众号开发文档：https://developers.weixin.qq.com/doc/offiaccount/Getting_Started&#x2F;Overview.html 微信公众号管理后台界面：https://mp.weixin.qq.com/ 微信公众号测试号管理后台界面：https://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index 微信开发者工具下载地址：https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html 微信开发者工具使用 下载地址：https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html 使用流程：打开【微信开发者工具】，选择【公众号网页调试】，将调试页面地址复制到如下即可本地调试页面   内网穿透工具使用 cploar ，官网地址：https://www.cpolar.c...</div></div></div></a><a class="pagination-related" href="/2026/07/13/yuque/openclaw%E4%BD%BF%E7%94%A8/" title="openclaw使用"><img class="cover" src="/img/cover/cover4.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-07-13</div><div class="info-item-2">openclaw使用</div></div><div class="info-2"><div class="info-item-1">基础操作修改会话名称 在对话框输入 &lt;font style=&quot;color:#DF2A3F;&quot;&gt;/name [title]&lt;/font&gt;  1/name 备份与迁移  实战微博运营 核心技能  1234567891011# 微博发布技能（支持普通微博+头条文章）clawhub install baoyu-post-to-weibo# 文案生成技能clawhub install copywriting# 图片生成技能（可选，用于配图）clawhub install baoyu-image-gen# 定时任务技能clawhub install cron-mastery   安装微博龙虾助手 对话安装    1帮我安装微博龙虾助手插件 https://gitee.com/wecode-ai/openclaw-weibo  - 手动下载  1openclaw plugins install @wecode-ai/weibo-openclaw-plugin  </div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">老酒馆的馆长大人</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/" target="_blank" title="Github"><i class="fab fa-github" style="color: #hdhfbb;"></i></a><a class="social-icon" href="/959972276@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">🍇欢迎大家关注这个博客！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#gitignore%E6%96%87%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">.gitignore文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%80%9A%E7%94%A8%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">创建通用忽略文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git%E9%85%8D%E7%BD%AEssh%E5%85%8D%E5%AF%86"><span class="toc-number">3.</span> <span class="toc-text">git配置ssh免密</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#github%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7"><span class="toc-number">4.</span> <span class="toc-text">github搜索技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%89%E6%9D%A1%E4%BB%B6%E7%AD%9B%E9%80%89"><span class="toc-number">4.1.</span> <span class="toc-text">按条件筛选</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%BE%E6%98%9F%E6%98%9F%E6%9C%80%E5%A4%9A%E7%9A%84"><span class="toc-number">4.1.1.</span> <span class="toc-text">找星星最多的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%89%E8%AF%AD%E8%A8%80"><span class="toc-number">4.1.2.</span> <span class="toc-text">按语言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%89%E6%97%B6%E9%97%B4"><span class="toc-number">4.1.3.</span> <span class="toc-text">按时间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%89%E5%A4%A7%E5%B0%8F"><span class="toc-number">4.1.4.</span> <span class="toc-text">按大小</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E6%90%9C%E7%B4%A2%E5%AE%9E%E6%88%98"><span class="toc-number">4.1.5.</span> <span class="toc-text">组合搜索实战</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%90%9C%E7%B4%A2"><span class="toc-number">4.2.</span> <span class="toc-text">代码搜索</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git%E5%BC%82%E5%B8%B8%E8%AE%B0%E5%BD%95"><span class="toc-number">5.</span> <span class="toc-text">git异常记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pre-receive-hook-declined"><span class="toc-number">5.1.</span> <span class="toc-text">pre-receive hook declined</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/07/16/yuque/Git%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/" title="Git使用记录"><img src="/img/cover/cover9.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git使用记录"/></a><div class="content"><a class="title" href="/2026/07/16/yuque/Git%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/" title="Git使用记录">Git使用记录</a><time datetime="2026-07-16T02:52:01.000Z" title="发表于 2026-07-16 10:52:01">2026-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/07/15/yuque/Dockerfile%E5%88%B6%E4%BD%9C%E9%95%9C%E5%83%8F/" title="Dockerfile制作镜像"><img src="/img/cover/cover4.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Dockerfile制作镜像"/></a><div class="content"><a class="title" href="/2026/07/15/yuque/Dockerfile%E5%88%B6%E4%BD%9C%E9%95%9C%E5%83%8F/" title="Dockerfile制作镜像">Dockerfile制作镜像</a><time datetime="2026-07-15T14:45:21.000Z" title="发表于 2026-07-15 22:45:21">2026-07-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/07/15/yuque/Docker%E5%85%A5%E9%97%A8/" title="Docker入门"><img src="/img/cover/cover1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker入门"/></a><div class="content"><a class="title" href="/2026/07/15/yuque/Docker%E5%85%A5%E9%97%A8/" title="Docker入门">Docker入门</a><time datetime="2026-07-15T14:44:22.000Z" title="发表于 2026-07-15 22:44:22">2026-07-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/07/15/yuque/%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81kaptcha/" title="图形验证码kaptcha"><img src="/img/cover/cover0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图形验证码kaptcha"/></a><div class="content"><a class="title" href="/2026/07/15/yuque/%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81kaptcha/" title="图形验证码kaptcha">图形验证码kaptcha</a><time datetime="2026-07-15T01:41:17.000Z" title="发表于 2026-07-15 09:41:17">2026-07-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/07/15/yuque/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/" title="微信公众号开发"><img src="/img/cover/cover6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="微信公众号开发"/></a><div class="content"><a class="title" href="/2026/07/15/yuque/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/" title="微信公众号开发">微信公众号开发</a><time datetime="2026-07-15T01:41:17.000Z" title="发表于 2026-07-15 09:41:17">2026-07-15</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/cute.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 老酒馆的馆长大人</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.5</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.5"></script><script src="/js/main.js?v=5.5.5"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline.bugmakerhub.xyz/',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.15.2/dist/waline.min.css')
+        .then(() => import('https://cdn.jsdelivr.net/npm/@waline/client@3.15.2/dist/waline.min.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.5"></script></div></div></body></html>
